@@ -120,9 +120,9 @@ Return exactly this structure with real current values:
   "FEDRATE":  { "value": "0.00–0.00%", "trend": "holding", "nextMeeting": "Month YYYY" }
 }`;
 
-  const res = await fetch("/api/chat", {
+const res = await fetch("/api/chat", {
     method: "POST",
-  
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       model: MODEL,
       max_tokens: 1000,
